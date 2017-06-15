@@ -56,7 +56,6 @@ public final class PhoneUtil {
         Uri data = Uri.parse("tel:" + phoneNumber);
         intent.setData(data);
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
             //   public void onRequestPermissionsResult(int requestCode, String[] permissions,

@@ -1,7 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wuwg.custom">
-
-    <permission android:name="android.permission.CALL_PHONE"/>
+    package="com.wuwg.security">
 
     <application
         android:allowBackup="true"

@@ -1,2 +1,4 @@
 include ':app',
+        'librarys:componentlibrary',
+        'librarys:securitylibrary',
         'librarys:customlibrary'
