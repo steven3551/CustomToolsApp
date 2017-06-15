@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/librarys" />
             <option value="$PROJECT_DIR$/librarys/customlibrary" />
+            <option value="$PROJECT_DIR$/librarys/securitylibrary" />
           </set>
         </option>
         <option name="myModules">
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/librarys" />
             <option value="$PROJECT_DIR$/librarys/customlibrary" />
+            <option value="$PROJECT_DIR$/librarys/securitylibrary" />
           </set>
         </option>
       </GradleProjectSettings>
