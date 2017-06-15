@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 
-import com.wuwg.custom.base.BaseApplication;
+import com.wuwg.custom.base.BaseApp;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -82,13 +82,13 @@ public class BitmapUtil {
         // 其次把文件插入到系统图库
         if (isShowPhotos) {
             try {
-                MediaStore.Images.Media.insertImage(BaseApplication.getIntstance().getContentResolver(),
+                MediaStore.Images.Media.insertImage(BaseApp.getIntstance().getContentResolver(),
                         file.getAbsolutePath(), name, null);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
             // 最后通知图库更新
-            BaseApplication.getIntstance().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + file)));
+            BaseApp.getIntstance().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + file)));
         }
 
         return true;
