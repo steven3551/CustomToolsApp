@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CustomToolsApp.iml" filepath="$PROJECT_DIR$/CustomToolsApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/componentlibrary/compontentlibrary.iml" filepath="$PROJECT_DIR$/componentlibrary/compontentlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/librarys/customlibrary/customlibrary.iml" filepath="$PROJECT_DIR$/librarys/customlibrary/customlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/librarys/librarys.iml" filepath="$PROJECT_DIR$/librarys/librarys.iml" />
       <module fileurl="file://$PROJECT_DIR$/securitylibrary/securitylibrary.iml" filepath="$PROJECT_DIR$/securitylibrary/securitylibrary.iml" />
