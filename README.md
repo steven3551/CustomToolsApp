@@ -11,7 +11,18 @@ MyLog：日志
   支持输出可跳转的Log函数定位信息
   支持自定义输出样式
 
-HTTP: 请求框架（Retrofit+OkHttp+RxJava）
+HTTP: 网络库隔离架构
+使用方法：
+  1、在Application中初始化HttpHelper.init(new VolleyHttpProcessor(getApplicationContext()));   选择使用的请求框架
+  2、获取处理器请求数据：HttpHelper.getHttpProcessor().post(url, params, new HttpCallBack<WeatherInfo>() {
+
+                    @Override
+                    protected void onSuccess(WeatherInfo result) {
+                        txtHttpResult.setText(result.toString());
+                    }
+                });
+ 扩展：实现接口IHttpProcessor选择对应的请求框架写一个对应的请求实体类即可
+        （类似：librarys\componentlibrary\src\main\java\com\wuwg\component\net\VolleyHttpProcessor.java）
 
 customlibrary：自定义空间、常用工具类等
 
