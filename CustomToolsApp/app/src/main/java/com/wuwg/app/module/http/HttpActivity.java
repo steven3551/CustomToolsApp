@@ -1,10 +1,9 @@
-package com.wuwg.app.activity;
+package com.wuwg.app.module.http;
 
 import android.view.View;
 import android.widget.TextView;
 
 import com.wuwg.app.R;
-import com.wuwg.app.entity.WeatherInfo;
 import com.wuwg.component.net.HttpCallBack;
 import com.wuwg.component.net.HttpHelper;
 import com.wuwg.custom.base.BaseActivity;
@@ -14,14 +13,14 @@ import java.util.HashMap;
 /**
  * Created by wuwengao on 2017/6/21.
  */
-public class HttpFrameworkActivity extends BaseActivity implements View.OnClickListener {
+public class HttpActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView txtHttpResult;
     private static final String url = "http://api.map.baidu.com/telematics/v3/weather?location=%E5%98%89%E5%85%B4&output=json&ak=5slgyqGDENN7Sy7pw29IUvrZ";
 
     @Override
     protected void setContentView() {
-        setContentView(R.layout.activity_http_framework);
+        setContentView(R.layout.activity_http);
     }
 
     @Override

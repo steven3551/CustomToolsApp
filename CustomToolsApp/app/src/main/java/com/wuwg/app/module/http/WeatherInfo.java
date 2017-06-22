@@ -1,4 +1,4 @@
-package com.wuwg.app.entity;
+package com.wuwg.app.module.http;
 
 /**
  * Created by wuwengao on 2017/6/21.

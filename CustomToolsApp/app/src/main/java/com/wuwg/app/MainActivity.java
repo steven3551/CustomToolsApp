@@ -1,9 +1,10 @@
-package com.wuwg.app.activity;
+package com.wuwg.app;
 
 import android.content.Intent;
 import android.view.View;
 
-import com.wuwg.app.R;
+import com.wuwg.app.module.animator.AnimatorActivity;
+import com.wuwg.app.module.http.HttpActivity;
 import com.wuwg.custom.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -26,13 +27,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void initEvent() {
         findViewById(R.id.btn_http_framework).setOnClickListener(this);
+        findViewById(R.id.btn_animator_framework).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_http_framework:
-                startActivity(new Intent(mActivity, HttpFrameworkActivity.class));
+                startActivity(new Intent(mActivity, HttpActivity.class));
+                break;
+            case R.id.btn_animator_framework:
+                startActivity(new Intent(mActivity, AnimatorActivity.class));
                 break;
         }
     }

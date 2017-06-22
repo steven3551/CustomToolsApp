@@ -2,12 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/btn_http_framework"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="网络库隔离架构" />
+
+    <Button
+        android:id="@+id/btn_animator_framework"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="高级动画架构" />
 
 </LinearLayout>
