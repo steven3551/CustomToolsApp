@@ -29,19 +29,23 @@ comtains Log、Security、Http、hotfix plugin
         
 ### 动画框架：主要是一个组件的自定义轨迹运动动画框架
 使用方法：（见：app\src\main\java\com\wuwg\app\module\animator\AnimatorActivity.java）
-AnimatorPath  暂时只有三种自定义动画，定位位置、沿直线轨迹运动、沿赛贝尔曲线曲线轨迹运动
-              /**
-               * 通过反射调用该方法
-               */
-              public void startAnimator(){
-                  AnimatorPath path = new AnimatorPath();
-                  path.moveTo(200, 200);
-                  path.lineTo(0, 200);
-                  path.cubicTo(300, 300, 200, -100, 0, 0);
-                  ObjectAnimator objectAnimator = ObjectAnimator.ofObject(this, "draw", new PathEvaluator(), path.getPoints().toArray());
-                  objectAnimator.setDuration(2000);
-                  objectAnimator.start();
-              }
+AnimatorPath  暂时只有三种自定义动画，定位位置、沿直线轨迹运动、沿赛贝尔曲线曲线轨迹运动               
+               /**
+                * 开始动画
+                */
+                private void startAnimator(){
+                    AnimatorPath path = new AnimatorPath();
+                    path.moveTo(200, 200);
+                    path.lineTo(0, 200);
+                    path.lineTo(0, 600);
+                    path.lineTo(600, 600);
+                    path.lineTo(600, 0);
+                    path.cubicTo(300, 300, 200, -100, 0, 0);
+                    ObjectAnimator objectAnimator = ObjectAnimator.ofObject(this, "draw", new PathEvaluator(), path.getPoints().toArray());
+                    objectAnimator.setDuration(2000);
+                    objectAnimator.start();
+                    objectAnimator.setRepeatCount(100);
+                }
               
              /**
               * 通过反射调用该方法
