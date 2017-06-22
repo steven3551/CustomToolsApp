@@ -14,8 +14,8 @@ MyLog：日志
 HTTP: 网络库隔离架构
 使用方法：
   1、在Application中初始化HttpHelper.init(new VolleyHttpProcessor(getApplicationContext()));   选择使用的请求框架
-  2、获取处理器请求数据：HttpHelper.getHttpProcessor().post(url, params, new HttpCallBack<WeatherInfo>() {
-
+  2、获取处理器请求数据：
+              HttpHelper.getHttpProcessor().post(url, params, new HttpCallBack<WeatherInfo>() {
                     @Override
                     protected void onSuccess(WeatherInfo result) {
                         txtHttpResult.setText(result.toString());
@@ -23,6 +23,28 @@ HTTP: 网络库隔离架构
                 });
  扩展：实现接口IHttpProcessor选择对应的请求框架写一个对应的请求实体类即可
         （类似：librarys\componentlibrary\src\main\java\com\wuwg\component\net\VolleyHttpProcessor.java）
+        
+动画框架：主要是一个组件的自定义轨迹运动动画框架
+使用方法：（见：app\src\main\java\com\wuwg\app\module\animator\AnimatorActivity.java）
+AnimatorPath  暂时只有三种自定义动画，定位位置、沿直线轨迹运动、沿赛贝尔曲线曲线轨迹运动
+              AnimatorPath path = new AnimatorPath();
+              path.moveTo(200, 200);
+              path.lineTo(0, 200);
+              path.cubicTo(300, 300, 200, -100, 0, 0);
+              ObjectAnimator objectAnimator = ObjectAnimator.ofObject(this, "draw", new PathEvaluator(), path.getPoints().toArray());
+              objectAnimator.setDuration(2000);
+              objectAnimator.start();
+              
+             /**
+             * 通过反射调用该方法
+             */
+            public void setDraw(PathPoint pathPoint){
+                if(pathPoint != null){
+                    imgAnimator.setTranslationX(pathPoint.mX);
+                    imgAnimator.setTranslationY(pathPoint.mY);
+                }
+            }
+
 
 customlibrary：自定义空间、常用工具类等
 
