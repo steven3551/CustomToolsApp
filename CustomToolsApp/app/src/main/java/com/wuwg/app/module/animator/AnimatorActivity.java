@@ -63,6 +63,9 @@ public class AnimatorActivity extends BaseActivity implements View.OnClickListen
         objectAnimator.setRepeatCount(100);
     }
 
+
+
+
     /**
      * 通过反射调用该方法
      */

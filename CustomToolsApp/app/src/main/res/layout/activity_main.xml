@@ -17,4 +17,10 @@
         android:layout_height="50dp"
         android:text="高级动画架构" />
 
+    <Button
+        android:id="@+id/btn_photo_compress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="高级动画架构" />
+
 </LinearLayout>

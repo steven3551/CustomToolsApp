@@ -17,6 +17,7 @@ import java.io.File;
  * @author jingle1267@163.com
  */
 public final class PhoneUtil {
+
     private static long lastClickTime;
 
     /**

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.wuwg.app.module.animator.AnimatorActivity;
+import com.wuwg.app.module.compress.PhotoCompressActivity;
 import com.wuwg.app.module.http.HttpActivity;
 import com.wuwg.custom.base.BaseActivity;
 
@@ -28,6 +29,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     protected void initEvent() {
         findViewById(R.id.btn_http_framework).setOnClickListener(this);
         findViewById(R.id.btn_animator_framework).setOnClickListener(this);
+        findViewById(R.id.btn_photo_compress).setOnClickListener(this);
     }
 
     @Override
@@ -38,6 +40,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_animator_framework:
                 startActivity(new Intent(mActivity, AnimatorActivity.class));
+                break;
+            case R.id.btn_photo_compress:
+                startActivity(new Intent(mActivity, PhotoCompressActivity.class));
                 break;
         }
     }
