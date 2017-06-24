@@ -30,6 +30,9 @@
 
         <activity android:name=".module.advancedui.SlidingCardActivity"></activity>
 
+        <activity android:name=".module.launcher.HookActivity"></activity>
+        <activity android:name=".module.launcher.ProxyActivity"></activity>
+
     </application>
 
 </manifest>
