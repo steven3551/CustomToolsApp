@@ -3,6 +3,7 @@ package com.wuwg.app;
 import android.content.Intent;
 import android.view.View;
 
+import com.wuwg.app.module.advancedui.SlidingCardActivity;
 import com.wuwg.app.module.animator.AnimatorActivity;
 import com.wuwg.app.module.compress.PhotoCompressActivity;
 import com.wuwg.app.module.http.HttpActivity;
@@ -30,6 +31,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_http_framework).setOnClickListener(this);
         findViewById(R.id.btn_animator_framework).setOnClickListener(this);
         findViewById(R.id.btn_photo_compress).setOnClickListener(this);
+        findViewById(R.id.btn_sliding_card).setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +45,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_photo_compress:
                 startActivity(new Intent(mActivity, PhotoCompressActivity.class));
+                break;
+            case R.id.btn_sliding_card:
+                startActivity(new Intent(mActivity, SlidingCardActivity.class));
                 break;
         }
     }

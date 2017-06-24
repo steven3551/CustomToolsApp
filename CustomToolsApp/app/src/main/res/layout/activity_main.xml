@@ -23,4 +23,10 @@
         android:layout_height="50dp"
         android:text="高级动画架构" />
 
+    <Button
+        android:id="@+id/btn_sliding_card"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="卡片联动特效" />
+
 </LinearLayout>
