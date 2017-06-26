@@ -1,7 +1,6 @@
 package com.wuwg.app.module.launcher;
 
-import android.widget.TextView;
-
+import com.wuwg.app.R;
 import com.wuwg.custom.base.BaseActivity;
 
 
@@ -12,8 +11,7 @@ public class NoRegisterActivity extends BaseActivity {
 
     @Override
     protected void setContentView() {
-        TextView textView = new TextView(mContext);
-        textView.setText("这是一个未注册的Activity");
+        setContentView(R.layout.activity_not_register);
     }
 
     @Override

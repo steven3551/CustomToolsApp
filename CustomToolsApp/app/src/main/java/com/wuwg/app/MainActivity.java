@@ -7,6 +7,7 @@ import com.wuwg.app.module.advancedui.SlidingCardActivity;
 import com.wuwg.app.module.animator.AnimatorActivity;
 import com.wuwg.app.module.compress.PhotoCompressActivity;
 import com.wuwg.app.module.http.HttpActivity;
+import com.wuwg.app.module.launcher.HookActivity;
 import com.wuwg.custom.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -32,6 +33,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_animator_framework).setOnClickListener(this);
         findViewById(R.id.btn_photo_compress).setOnClickListener(this);
         findViewById(R.id.btn_sliding_card).setOnClickListener(this);
+        findViewById(R.id.btn_hook_activity).setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +50,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_sliding_card:
                 startActivity(new Intent(mActivity, SlidingCardActivity.class));
+                break;
+            case R.id.btn_hook_activity:
+                startActivity(new Intent(mActivity, HookActivity.class));
                 break;
         }
     }
